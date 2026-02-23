@@ -1,0 +1,40 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: rgb(65, 65, 65);
+}
+
+#images {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.photo_list {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.border {
+	background-color: black;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.photo_container{
+	display:flex;
+	justify-content: center;
+	scroll-snap-align: center;
+}
+
+.photo {
+	height:90vh;
+}
+
+#Title {
+	color: white;
+}
