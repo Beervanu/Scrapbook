@@ -101,7 +101,7 @@ body {
 
 @media (max-width:480px)
 {
-	#about {visibility: hidden;}
+	.button {visibility: hidden;}
 	.photo_list {visibility: hidden;}
 	#switch_orientation {visibility: visible;}
 }
