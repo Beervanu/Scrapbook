@@ -1,1 +1,0 @@
-node "./image_lister.js"
