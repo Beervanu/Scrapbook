@@ -36,7 +36,12 @@ fetch("photos.json").then(res => res.json()).then(photos=>
 })
 
 document.getElementById("fullscreen").addEventListener("click", (e)=>{
-	document.getElementById("photo_list").requestFullscreen()
+	let ph = document.getElementById("photo_list")
+	if (ph.requestFullscreen) {
+		ph.requestFullscreen();
+	} else if (ph.webkitRequestFullscreen) { // Safari
+		ph.webkitRequestFullscreen();
+	}
 })
 
 function next_day(reverse=false)
