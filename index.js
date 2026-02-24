@@ -42,6 +42,9 @@ document.getElementById("fullscreen").addEventListener("click", (e)=>{
 	} else if (ph.webkitRequestFullscreen) { // Safari
 		ph.webkitRequestFullscreen();
 	}
+	else {
+		ph.innerText = "Fullscreen not supported on your device"
+	}
 })
 
 function next_day(reverse=false)
