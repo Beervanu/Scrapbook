@@ -5,6 +5,8 @@ html {
 body {
 	color: white;
 	background-color: rgb(65, 65, 65);
+	overflow: hidden;
+	height: 100%
 }
 
 #images {
@@ -110,7 +112,7 @@ body {
 	transform: translate(-50%,-50%);
 }
 
-@media (max-width:480px)
+@media (max-width:550px)
 {
 	#fullscreen {display: none}
 	#footer {font-size: 4vw;}
