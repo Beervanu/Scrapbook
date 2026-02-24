@@ -43,7 +43,7 @@ document.getElementById("fullscreen").addEventListener("click", (e)=>{
 		ph.webkitRequestFullscreen();
 	}
 	else {
-		ph.innerText = "Fullscreen not supported on your device"
+		document.getElementById("footer").innerText = "Fullscreen not supported on your device"
 	}
 })
 
