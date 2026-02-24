@@ -20,7 +20,7 @@ fetch("photos.json").then(res => res.json()).then(photos=>
 		img_div.innerHTML += '<div class="photo_container" ><div class="border"><img class="photo" src="./Images/'+date +'/'+images[i]+'"></div></div>'
 	}
 	document.getElementById("Title").innerText = date+":"
-	
+
 	let left_button = document.getElementById("left")
 	let right_button = document.getElementById("right")
 	if (day ==1)
@@ -35,6 +35,9 @@ fetch("photos.json").then(res => res.json()).then(photos=>
 	document.getElementById("right").addEventListener("click", (e)=> next_day())
 })
 
+document.getElementById("fullscreen").addEventListener("click", (e)=>{
+	document.getElementById("photo_list").requestFullscreen()
+})
 
 function next_day(reverse=false)
 {

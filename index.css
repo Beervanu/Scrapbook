@@ -44,7 +44,6 @@ body {
 #about {
 	position: fixed;
 	bottom: 10px;
-	padding: 3px;
 	cursor: default;
 }
 
@@ -84,6 +83,7 @@ body {
 .button {
 	background-color: rgb(41, 41, 41);
 	border-radius:2px;
+	padding: 3px;
 }
 
 .button:hover
@@ -120,4 +120,10 @@ body {
 
 #left {
 	left: 5%;
+}
+
+#fullscreen {
+	position: fixed;
+	bottom:10px;
+	right: 10px;
 }
