@@ -21,6 +21,8 @@ fetch("photos.json").then(res => res.json()).then(photos=>
 	document.getElementById("Title").innerText = date+":"
 }
 )
+
+
 document.addEventListener("keydown", onArrowKey)
 function onArrowKey(e)
 {

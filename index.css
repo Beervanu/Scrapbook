@@ -3,6 +3,7 @@ html {
 }
 
 body {
+	color: white;
 	background-color: rgb(65, 65, 65);
 }
 
@@ -15,7 +16,7 @@ body {
 .photo_list {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh;
+  height: 95vh;
 }
 
 .border {
@@ -36,5 +37,65 @@ body {
 }
 
 #Title {
-	color: white;
+	position: fixed;
+}
+
+#about {
+	background-color: rgb(41, 41, 41);
+	position: fixed;
+	bottom: 10px;
+	padding: 3px;
+	border-radius:2px;
+}
+
+#tooltip_container {
+	display: flex;
+	justify-content: center;
+}
+
+.center {
+	text-align: center;
+	position: fixed;
+}
+
+#tooltip
+{
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	background-color: black;
+	padding: 5px;
+	font-size: 30px;
+	visibility: hidden;
+	border-radius: 5px;
+}
+
+#footer {
+	left:50%;
+	transform:translate(-50%, 0);
+}
+
+
+
+#about:hover+#tooltip{
+	visibility: visible;
+}
+
+#about:hover
+{
+	background-color: rgb(29, 29, 29);	
+}
+
+#switch_orientation {
+	visibility: hidden;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+
+@media (max-width:480px)
+{
+	#about {visibility: hidden;}
+	.photo_list {visibility: hidden;}
+	#switch_orientation {visibility: visible;}
 }
