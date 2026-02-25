@@ -23,10 +23,10 @@ body {
 
 .border {
 	background-color: black;
-	padding: 10px;
-	margin-bottom: 7px;
-	margin-top:8px;
-	border-radius: 5px;
+	padding: 1.5vh;
+	margin-bottom: .5vh;
+	margin-top:.5vh;
+	border-radius: .75vh;
 }
 
 .photo_container{
@@ -36,8 +36,10 @@ body {
 }
 
 .photo {
+	min-height: 90vh;
 	max-height: 90vh;
 	max-width: 80vw;
+	display: block;
 }
 
 #Title {
