@@ -36,10 +36,15 @@ body {
 }
 
 .photo {
-	min-height: 90vh;
 	max-height: 90vh;
 	max-width: 80vw;
 	display: block;
+}
+
+@media (min-aspect-ratio: 4/3) {
+	.photo {
+		min-height: 90vh;
+	}
 }
 
 #Title {
