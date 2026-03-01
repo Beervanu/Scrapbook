@@ -1,0 +1,22 @@
+{
+  "name": "scrapbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beervanu/Scrapbook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beervanu/Scrapbook/issues"
+  },
+  "homepage": "https://github.com/Beervanu/Scrapbook#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0"
+  }
+}
