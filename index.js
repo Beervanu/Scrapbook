@@ -1,17 +1,25 @@
 let num_days = 1
 let params = new URLSearchParams(window.location.search)
 let day = parseInt(params.get("day"))
+let perm_day= parseInt(params.get("perm"))
 let known_scroll_x = 0
-if (!day) 
-{
-	url = new URL(window.location.href)
-	url.searchParams.set("day", 1)
-	window.location.href = url
-}
 
 fetch("photos.json").then(res => res.json()).then(photos=>
 {
 	num_days = photos.dates.length
+	if (perm_day)
+	{
+		day = num_days-perm_day+1
+		go_to_day(day)
+	}
+	if (!day || day<1)
+	{
+		go_to_day(1)
+	}
+	else if (day>num_days)
+	{
+		go_to_day(num_days)
+	}
 	date = photos.dates[day-1]
 	let images = photos[date]
 	let img_div = document.getElementById("images")
@@ -49,15 +57,21 @@ document.getElementById("fullscreen").addEventListener("click", (e)=>{
 
 function next_day(reverse=false)
 {
-	url = new URL(window.location.href)
 	if (!reverse)
 	{
-		url.searchParams.set("day", Math.max(1,day-1))
+		go_to_day(Math.max(1,day-1))
 	}
 	else
 	{
-		url.searchParams.set("day", Math.min(num_days, day+1))
+		go_to_day(Math.min(num_days, day+1))
 	}
+}
+
+function go_to_day(day_num)
+{
+	url = new URL(window.location.href)
+	url.searchParams.set("day", day_num)
+	url.searchParams.delete("perm")
 	window.location.href = url
 }
 
