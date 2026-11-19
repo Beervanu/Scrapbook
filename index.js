@@ -27,7 +27,7 @@ fetch("photos.json").then(res => res.json()).then(photos=>
 	{
 		img_div.innerHTML += '<div class="photo_container" ><div class="border"><img class="photo" src="./Images/'+date +'/'+images[i]+'"></div></div>'
 	}
-	document.getElementById("Title").innerText = date+":"
+	document.getElementById("title").innerText = date+":"
 
 	let left_button = document.getElementById("left")
 	let right_button = document.getElementById("right")

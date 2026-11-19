@@ -6,7 +6,9 @@ body {
 	color: white;
 	background-color: rgb(65, 65, 65);
 	overflow: hidden;
-	height: 100%
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr [img-start] 10fr [img-end] 1fr;
 }
 
 #images {
@@ -16,9 +18,10 @@ body {
 }
 
 .photo_list {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 94vh;
+	grid-column: img-start / img-end;
+  	scroll-snap-type: y mandatory;
+  	overflow-y: scroll;
+  	height: 94vh;
 }
 
 .border {
@@ -47,8 +50,9 @@ body {
 	}
 }
 
-#Title {
-	position: fixed;
+#title {
+	font-size: 1vw;
+	justify-self: center;
 }
 
 #about {
